@@ -6,6 +6,7 @@ BEGIN
 	ALTER DATABASE NationalParkThemeSongs_GratefulDeadEdition SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 	DROP DATABASE NationalParkThemeSongs_GratefulDeadEdition;
 END
+--DROP DATABASE IF EXISTS NationalParkThemeSongs_GratefulDeadEdition;
 
 CREATE DATABASE NationalParkThemeSongs_GratefulDeadEdition;
 GO
@@ -36,7 +37,7 @@ BEGIN TRANSACTION;
  venue				nvarchar(100)		NOT NULL,					--Where the selected song was recorded
  location			nvarchar(100)		NOT NULL,					--Venue location (city, state)
  date_recorded		date				NOT NULL,					--Date the recording took place
- length				time				NOT NULL,					--Length of the song
+ link				nvarchar(200)		NOT NULL,					--Link to song on archive.org
  description		nvarchar(1500)		NOT NULL,					--Why chosen song/version is the parks unoffical theme song
 
  CONSTRAINT pk_songs PRIMARY KEY(song_id)
@@ -249,4 +250,69 @@ INSERT INTO [parks] (name, location, establish_date, area, visitors, description
 VALUES ('Zion', 'Utah', '11/19/1919', 595.9, 4488268, 'Zion National Park is so large and popular that visitors must park and take a shuttle to access it, so as not to create traffic. At its highest point, Zion is 8,726 feet (Kolob Canyon) while at its lowest, it is 3,666 feet (Coal Pits Wash), with an underground spring emerging through the rock surfaces.')
 
 COMMIT;
---SELECT * FROM parks;
+--SELECT * FROM parks WHERE establish_date < '1945' ORDER BY establish_date ASC;
+
+--adding songs
+--all songs gathered from https://archive.org/details/GratefulDead?tab=collection
+BEGIN TRANSACTION
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('New Minglewood Blues', 'Fillmore East', 'New York City, New York', '04/29/1971', 'https://archive.org/details/gd71-04-29.sbd.frisco.16782.sbeok.shnf/gd71-04-29d2t06.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Here Comes Sunshine', 'Curtis Hixon Convention Hall', 'Tampa, Florida', '12/19/1973', 'https://archive.org/details/gd1973-12-19.sbd.miller.97361.sbeok.flac16/gd73-12-19d1t10.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Crazy Fingers', 'Beacon Theater', 'New York City, New York', '06/14/1976', 'https://archive.org/details/gd76-06-14.sbd.hollister.22804.sbeok.shnf/gd760614-d3t1.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Touch of Grey', 'Hartford Civic Center', 'Hartford, Connecticut', '03/27/1987', 'https://archive.org/details/gd1987-03-27.sbd.seaweed.111241.flac2448/gd1987-03-27s2t02.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Bird Song', 'Old Renessaince Faire Grounds', 'Veneta, Oregon', '08/27/1972', 'https://archive.org/details/gd72-08-27.sbd.braverman.16582.sbefail.shnf/gd72-08-27d2t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Warf Rat', 'University of New Mexico', 'Albequerque, New Mexico', '10/07/1977', 'https://archive.org/details/gd1977-10-07.sbd-set2.miller.79020.sbeok.flac16/gd77-10-07d3t04.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Black Throated Wind', 'Portland Memorial Coliseum', 'Portland, Oregon', '05/19/1974', 'https://archive.org/details/gd74-05-19.sbd.clugston.6957.sbeok.shnf/gd74-05-19d1t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Mountains of the Moon', 'Dream Bowl', 'Vallejo, California', '02/22/1969', 'https://archive.org/details/gd1969-02-22.sbd.miller.112691.flac16/gd69-02-22d1t02.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('New Speedway Boogie', 'Fillmore East', 'New York City, New York', '09/20/1970', 'https://archive.org/details/gd70-09-20.aud.remaster.sirmick.27583.sbeok.shnf/gd70-09-20d1t11.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Help on the Way > Slipknot', 'Great American Music Hall', 'San Francisco, California', '08/13/1975', 'https://archive.org/details/gd1975-08-13.155570.FM.flegel.flac1644/01+Help+On+the+Way+-+Slipknot!.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Me and My Uncle', 'Horton Field House', 'Normal, Illinois', '04/24/1978', 'https://archive.org/details/gd78-04-24.sbd.mattman.20605.sbeok.shnf', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('West L.A. Fadeaway', 'Copps Coliseum', 'Hamption, Ontario', '03/22/1990', 'https://archive.org/details/gd90-03-22.sbd-matrix.aj.453.sbefail.shnf/gd90-03-22d1t2.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Sugar Magnolia', 'L''Olympia', 'Paris, France', '05/04/1972', 'https://archive.org/details/gd1972-05-04.sbd.miller.77294.sbeok.flac16/gd72-05-04d3t04.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Greatest Story Ever Told', 'Stanley Theater', 'Jersey City, New Jersey', '09/28/1972', 'https://archive.org/details/gd1972-09-28.sbd.miller.94268.sbeok.flac16/gd72-09-28d2t03.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Big Railroad Blues', 'Pershing Municipal Auditorium', 'Lincoln, Nebraska', '02/26/1973', 'https://archive.org/details/gd73-02-26.sbd.kaplan.1208.sbeok.shnf/gd73-02-26d1t14.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Death Don''t Have No Mercy in This Land', 'Avalon Ballroom', 'San Francisco, California', '10/12/1968', 'https://archive.org/details/gd68-10-12.sbd.eD.10909.sbeok.shnf/gd68-10-12t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Dark Star', 'Old Renaissance Faire Grounds', 'Veneta, Oregon', '08/27/1972', 'https://archive.org/details/gd72-08-27.sbd.braverman.16582.sbefail.shnf/gd72-08-27d3t01.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Ship of Fools', 'Jai Alai Fronton', 'Miami, Florida', '06/23/1974', 'https://archive.org/details/gd1974-06-23.mtx.seamons.105983.flac16/gd74-06-23d2t07.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Alligator', 'Shrine Auditorium', 'Los Angeles, California', '08/23/1968', 'https://archive.org/details/gd68-08-23.sbd.sacks.52.sbefail.shnf/gd68-8-23d2t5.shn', 'description')
+
+--SELECT * FROM songs;
+ROLLBACK;
+--SELECT * FROM songs;
