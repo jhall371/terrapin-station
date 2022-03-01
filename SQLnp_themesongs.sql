@@ -6,8 +6,9 @@ BEGIN
 	ALTER DATABASE NationalParkThemeSongs_GratefulDeadEdition SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 	DROP DATABASE NationalParkThemeSongs_GratefulDeadEdition;
 END
---DROP DATABASE IF EXISTS NationalParkThemeSongs_GratefulDeadEdition;
 
+--DROP DATABASE IF EXISTS NationalParkThemeSongs_GratefulDeadEdition;
+--GO;
 CREATE DATABASE NationalParkThemeSongs_GratefulDeadEdition;
 GO
 
@@ -313,6 +314,137 @@ VALUES('Ship of Fools', 'Jai Alai Fronton', 'Miami, Florida', '06/23/1974', 'htt
 INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('Alligator', 'Shrine Auditorium', 'Los Angeles, California', '08/23/1968', 'https://archive.org/details/gd68-08-23.sbd.sacks.52.sbefail.shnf/gd68-8-23d2t5.shn', 'description')
 
---SELECT * FROM songs;
-ROLLBACK;
---SELECT * FROM songs;
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Cold Rain and Snow', 'Augusta Civic Center', 'Augusta, Maine', '10/12/1984', 'https://archive.org/details/gd84-10-12.sbd.clugston.5585.sbeok.shnf/gd84-10-12d1t08.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('U.S. Blues', 'Jai Alai Fronton', 'Miami, Florida', '06/23/1974',  'https://archive.org/details/gd74-06-23.sbd.cribbs.16780.sbeok.shnf/gd74-06-23d3t03.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Stella Blue', 'Winterland Arena', 'San Francisco, California', '10/21/1978', 'https://archive.org/details/gd78-10-21.sbd.popi.6100.sbeok.shnf/gd78-10-21d3t05.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Black Peter', 'Northern Illinois University, Evans Field House', 'Delkalb, Illinois', '10/29/1977', 'https://archive.org/details/gd1977-10-29.sbd.miller.92085.sbeok.flac16/gd77-10-29d3t07.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Built to Last', 'Alpine Valley Music Theatre', 'East Troy, Wisconsin', '07/17/1989', 'https://archive.org/details/gd89-07-17.sbd.unknown.17702.sbeok.shnf/gd1989-07-17d1t03.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Deal', 'Rockpalast, Grugahalle', 'Essen, Germany', '03/28/1981', 'https://archive.org/details/gd1981-03-28.fm.hanno.deepelem.fix-3306.22802.sbeok.flac16/gd1981-03-28d2t03-fixed.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Sugaree', 'Hartford Civic Center', 'Hartford, California', '05/28/1977', 'https://archive.org/details/gd1977-05-28.sbd.ashley-bertha.12827.sbeok.flac16/gd77-05-28d1t03.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Franklin''s Tower', 'Alameda County Coliseum', 'Oakland, California', '10/09/1976', 'https://archive.org/details/gd76-10-09.set2-sbd.miller.12519.sbeok.shnf/gd76-10-09d2t10.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Tennessee Jed', 'Winterland Arena', 'San Francisco, California', '10/20/1974', 'https://archive.org/details/gd1974-10-20.sbd.smith-lee.GEMS.97193.flac16/gd74-10-20.GEMS.d1t08.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('El Paso', 'Capitol Theater', 'Port Chester, New York', '11/08/1970', 'https://archive.org/details/gd1970-11-08.aud.lee.pcrp.26975.shnf/PCRP-007NRPS-GD1970-11-8d1t06.aif.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Looks Like Rain', 'Frost Amphitheatre', 'Palo Alto, California', '10/10/1982', 'https://archive.org/details/gd82-10-10.sbd.sacks.338.sbefail.shnf/gd82-10-10d1t08.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Fire on the Mountain', 'Radio City Music Hall', 'New York City, New York', '10/31/1980', 'https://archive.org/details/gd1980-10-31.prefm.cousinit-edited.patched.83158.sbeok.flac16/gd80-10-31d3t04.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('To Lay Me Down', 'Madison Square Garden', 'New York City, New York', '09/18/1990', 'https://archive.org/details/gd90-09-18.sbd.miller.12885.sbeok.shnf/gd90-09-18d1t07.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Jack-A-Roe', 'Lakeland Civic Center', 'Lakeland, Florida', '05/21/1977', 'https://archive.org/details/gd77-05-21.sbd.boyle.271.sbeok.shnf/d1t05.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Morning Dew', 'Madison Square Garden', 'New York City, New York', '09/18/1987', 'https://archive.org/details/gd87-09-18.sbd.samaritano.20025.sbeok.shnf/gd1987-09-18d3t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Estimated Prophet', 'Red Rocks Amphitheatre', 'Morrison, Colorado', '07/08/1978', 'https://archive.org/details/gd78-07-08.sbd.unknown.294.sbeok.shnf/gd78-07-08d2t03-fixed.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Truckin''', 'Portland Memorial Coliseum', 'Portland, Oregon', '05/19/1974', 'https://archive.org/details/gd1974-05-19.sbd.miller.106716.flac16/gd74-05-19d3t03.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Box of Rain', 'The Spectrum', 'Philadelphia, Pennsylvania', '03/24/1973', 'https://archive.org/details/gd73-03-24.sbd.bertha-ashley.25508.sbeok.shnf/gd73-03-24_Bertha_d1t06.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Promised Land', 'Madison Square Garden', 'New York City, New York', '09/18/1990', 'https://archive.org/details/gd90-09-18.sbd.miller.12885.sbeok.shnf/gd90-09-18d1t08.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Feel Like a Stranger', 'Hampton Coliseum', 'Hampton, Virginia', '10/09/1989', 'https://archive.org/details/gd89-10-09.sbd.serafin.7721.sbeok.shnf/gd89-10-09d1t01.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Ripple', 'Capital Centre', 'Landover, Maryland', '09/03/1988', 'https://archive.org/details/gd88-09-03.sbd.miller.27749.sbeok.flacf/gd88-09-03d2t12.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('St. Stephen', 'University of Oregon, McArthur Court', 'Eugene, Oregon', '01/22/1978', 'https://archive.org/details/gd78-01-22.sbd.popi.4974.sbeok.shnf/gd78-01-22d3t05.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Throwing Stones', 'Hampton Coliseum', 'Hampton, Virginia', '10/09/1989', 'https://archive.org/details/gd89-10-09.sbd.serafin.7721.sbeok.shnf/gd89-10-09d3t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Brokedown Palace', 'Warfield Theater', 'San Francisco, California', '10/03/1980', 'https://archive.org/details/gd80-10-03.nak300.vernon.16208.sbeok.shnf/gd80-10-03d3t10.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Playing in the Band', 'Hofheinz Pavillion', 'Houston, Texas', '11/18/1972', 'https://archive.org/details/gd72-11-18.set2-sbd.cotsman.9002.sbeok.shnf/gd72-11-18d1t06.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Cumberland Blues', 'Wembley Empire Pool', 'London, United Kingdom', '04/08/1972', 'https://archive.org/details/gd72-04-08.sbd.giles-jeffm.2534.sbeok.shnf/gd72-04-08d1t08.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Unbroken Chain', 'Charlotte Coliseum', 'Charlotte, North Carolina', '03/23/1995', 'https://archive.org/details/gd95-03-23.sbd.miller.25273.sbeok.flacf/gd95-03-23d2t01.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Lazy Lightening', 'Supplication Sportatorium', 'Pembroke Pines, Florida', '05/22/1977', 'https://archive.org/details/gd1977-05-22.140278.sbd.miller.flac2496/08LazyLightning.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('He''s Gone', 'Nassau Coliseum', 'Long Island, New York', '05/06/1981', 'https://archive.org/details/gd81-05-06.glassberg.vernon.17697.sbeok.shnf/gd81-05-06d3t02.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('The Music Never Stopped', 'Buffalo Memorial Auditorium', 'Buffalo, New York', '05/09/1977', 'https://archive.org/details/gd1977-05-09.135189.mtx.dusborne.flac16/gd77-05-09s1t11.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Weather Report Suite > Let It Grow', 'Freedom Hall', 'Louisville, Kentucky', '06/18/1974', 'https://archive.org/details/gd1974-06-18.sbd.miller.89690.sbeok.flac16/gd74-06-18d2t04.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('China Cat Sunflower', 'The Spectrum', 'Philadelphia, Pennsylvania', '09/21/1972', 'https://archive.org/details/gd72-09-21.sbd.masse.7296.sbeok.shnf/gd72-9-21d1t04.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Jack Straw', 'Cornell University, Barton Hall', 'Ithica, New York', '05/08/1977', 'https://archive.org/details/gd77-05-08.sbd.hicks.4982.sbeok.shnf/gd77-05-08eaton-d1t05.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Uncle John''s Band', 'Oakland Auditorium Arena', 'Oakland, California', '12/26/1979', 'https://archive.org/details/gd1979-12-26.sonyECM250.walker-scotton.miller.89187.sbeok.flac16/gd79-12-26d2t02.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('I''ve Been All Around This World', 'Fillmore East', 'New York City, New York', '02/14/1970', 'https://archive.org/details/gd1970-02-14.sbd.miller.97644.flac16/gd70-02-14d2t07.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Brown Eyed Women', 'Colgate University, Cotterell Gym', 'Hamilton, New York', '11/04/1977', 'https://archive.org/details/gd77-11-04.moore.jupile-weiner.15208.sbeok.shnf/gd1977-11-04-moore-d1t03.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Eyes of the World', 'Roosevelt Stadium', 'Jersey City, New Jersey', '08/06/1974', 'https://archive.org/details/gd74-08-06.merin.weiner.gdADT.5914.sbefail.shnf/gd74-08-06d1t07.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Row Jimmy', 'Cornell University, Barton Field House', 'Ithica, New York', '05/08/1977', 'https://archive.org/details/gd77-05-08.sbd.hicks.4982.sbeok.shnf/gd77-05-08eaton-d2t01.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('China Doll', 'Fox Theater', 'Atlanta, Georgia', '05/19/1977', 'https://archive.org/details/gd1977-05-19.139377.sbd.latvala.miller.sirmick.flac1648/gd1977-05-19s2t10.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Blow Away', 'John F. Kennedy Stadium', 'Philadelphia, Pennsylvania', '07/07/1989', 'https://archive.org/details/gd89-07-07.aud.wiley.7855.sbeok.shnf/gd89-07-07d1t8.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Cryptic Envalopment > The Other One', 'Harpur College', 'Binghamton, New York', '05/02/1970', 'https://archive.org/details/gd1970-05-02.138227.sbd.miller.flac1648/28ThatsItForTheOtherOne.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Dire Wolf', 'Huntington Civic Center', 'Huntington, West Virginia', '04/16/1978', 'https://archive.org/details/gd78-04-16.sbd.lai.292.sbeok.shnf/gd1978-04-16d1t02.shn', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Terrapin Station', 'Swing Auditorium', 'San Bernadino, California', '02/26/1977', 'https://archive.org/details/gd1977-02-26.mtx.seamons-bertrando.110037.flac16/gd77-02-26d1t01.flac', 'description')
+
+INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
+VALUES('Samson and Delilah', 'River Bend Music Center', 'Cincinnati, Ohio', '06/24/1985', 'https://archive.org/details/gd85-06-24.sbd.miller.25315.sbeok.shnf/gd85-06-24d2t02.shn', 'description')
+
+COMMIT;
+SELECT * FROM songs;
