@@ -396,7 +396,7 @@ INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('Unbroken Chain', 'Charlotte Coliseum', 'Charlotte, North Carolina', '03/23/1995', 'https://archive.org/details/gd95-03-23.sbd.miller.25273.sbeok.flacf/gd95-03-23d2t01.flac', 'description')
 
 INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
-VALUES('Lazy Lightening', 'Supplication Sportatorium', 'Pembroke Pines, Florida', '05/22/1977', 'https://archive.org/details/gd1977-05-22.140278.sbd.miller.flac2496/08LazyLightning.flac', 'description')
+VALUES('Lazy Lightning', 'Supplication Sportatorium', 'Pembroke Pines, Florida', '05/22/1977', 'https://archive.org/details/gd1977-05-22.140278.sbd.miller.flac2496/08LazyLightning.flac', 'description')
 
 INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('He''s Gone', 'Nassau Coliseum', 'Long Island, New York', '05/06/1981', 'https://archive.org/details/gd81-05-06.glassberg.vernon.17697.sbeok.shnf/gd81-05-06d3t02.shn', 'description')
@@ -435,7 +435,7 @@ INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('Blow Away', 'John F. Kennedy Stadium', 'Philadelphia, Pennsylvania', '07/07/1989', 'https://archive.org/details/gd89-07-07.aud.wiley.7855.sbeok.shnf/gd89-07-07d1t8.shn', 'description')
 
 INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
-VALUES('Cryptic Envalopment > The Other One', 'Harpur College', 'Binghamton, New York', '05/02/1970', 'https://archive.org/details/gd1970-05-02.138227.sbd.miller.flac1648/28ThatsItForTheOtherOne.flac', 'description')
+VALUES('Cryptical Envelopment > The Other One', 'Harpur College', 'Binghamton, New York', '05/02/1970', 'https://archive.org/details/gd1970-05-02.138227.sbd.miller.flac1648/28ThatsItForTheOtherOne.flac', 'description')
 
 INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('Dire Wolf', 'Huntington Civic Center', 'Huntington, West Virginia', '04/16/1978', 'https://archive.org/details/gd78-04-16.sbd.lai.292.sbeok.shnf/gd1978-04-16d1t02.shn', 'description')
@@ -447,4 +447,323 @@ INSERT INTO [songs] (name, venue, location, date_recorded, link, description)
 VALUES('Samson and Delilah', 'River Bend Music Center', 'Cincinnati, Ohio', '06/24/1985', 'https://archive.org/details/gd85-06-24.sbd.miller.25315.sbeok.shnf/gd85-06-24d2t02.shn', 'description')
 
 COMMIT;
-SELECT * FROM songs;
+--SELECT * FROM songs;
+
+BEGIN TRANSACTION;
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Acadia'),
+		(SELECT song_id FROM songs WHERE name = 'New Minglewood Blues'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'American Samoa'),
+		(SELECT song_id FROM songs WHERE name = 'Here Comes Sunshine'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Arches'),
+		(SELECT song_id FROM songs WHERE name = 'Crazy Fingers'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Badlands'),
+		(SELECT song_id FROM songs WHERE name = 'Touch of Grey'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Big Bend'),
+		(SELECT song_id FROM songs WHERE name = 'Bird Song'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Biscayne'),
+		(SELECT song_id FROM songs WHERE name = 'Warf Rat'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Black Canyon of the Gunnison'),
+		(SELECT song_id FROM songs WHERE name = 'Black Throated Wind'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Bryce Canyon'),
+		(SELECT song_id FROM songs WHERE name = 'Mountains of the Moon'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Canyonlands'),
+		(SELECT song_id FROM songs WHERE name = 'New Speedway Boogie'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Capitol Reef'),
+		(SELECT song_id FROM songs WHERE name = 'Help on the Way > Slipknot'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Carlsbad Caverns'),
+		(SELECT song_id FROM songs WHERE name = 'Me and My Uncle'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Channel Islands'),
+		(SELECT song_id FROM songs WHERE name = 'West L.A. Fadeaway'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Congaree'),
+		(SELECT song_id FROM songs WHERE name = 'Sugar Magnolia'))
+
+				
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Crater Lake'),
+		(SELECT song_id FROM songs WHERE name = 'Greatest Story Ever Told'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Cuyahoga Valley'),
+		(SELECT song_id FROM songs WHERE name = 'Big Railroad Blues'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Death Valley'),
+		(SELECT song_id FROM songs WHERE name = 'Death Don''t Have no Mercy in This Land'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Denali'),
+		(SELECT song_id FROM songs WHERE name = 'Dark Star'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Dry Tortugas'),
+		(SELECT song_id FROM songs WHERE name = 'Ship of Fools'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Everglades'),
+		(SELECT song_id FROM songs WHERE name = 'Alligator'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Gates of the Arctic'),
+		(SELECT song_id FROM songs WHERE name = 'Cold Rain and Snow'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Gateway Arch'),
+		(SELECT song_id FROM songs WHERE name = 'U.S. Blues'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Glacier'),
+		(SELECT song_id FROM songs WHERE name = 'Black Peter'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Glacier Bay'),
+		(SELECT song_id FROM songs WHERE name = 'Stella Blue'))
+				
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Grand Canyon'),
+		(SELECT song_id FROM songs WHERE name = 'Built to Last'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Grand Teton'),
+		(SELECT song_id FROM songs WHERE name = 'Deal'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Great Basin'),
+		(SELECT song_id FROM songs WHERE name = 'Sugaree'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Great Sand Dunes'),
+		(SELECT song_id FROM songs WHERE name = 'Franklin''s Tower'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Great Smoky Mountains'),
+		(SELECT song_id FROM songs WHERE name = 'Tennessee Jed'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Guadalupe Mountains'),
+		(SELECT song_id FROM songs WHERE name = 'El Paso'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Haleakala'),
+		(SELECT song_id FROM songs WHERE name = 'Looks Like Rain'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Hawaii Volcanoes'),
+		(SELECT song_id FROM songs WHERE name = 'Fire on the Mountain'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Hot Springs'),
+		(SELECT song_id FROM songs WHERE name = 'To Lay Me Down'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Indiana Dunes'),
+		(SELECT song_id FROM songs WHERE name = 'Jack-A-Roe'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Isle Royale'),
+		(SELECT song_id FROM songs WHERE name = 'Morning Dew'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Joshua Tree'),
+		(SELECT song_id FROM songs WHERE name = 'Estimated Prophet'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Katmai'),
+		(SELECT song_id FROM songs WHERE name = 'Truckin'''))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Kenai Fjords'),
+		(SELECT song_id FROM songs WHERE name = 'Box of Rain'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Kings Canyon'),
+		(SELECT song_id FROM songs WHERE name = 'Promised Land'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Kobuk Valley'),
+		(SELECT song_id FROM songs WHERE name = 'Feel Like a Stranger'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Lake Clark'),
+		(SELECT song_id FROM songs WHERE name = 'Ripple'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Lassen Volcanic'),
+		(SELECT song_id FROM songs WHERE name = 'St. Stephen'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Mammoth Cave'),
+		(SELECT song_id FROM songs WHERE name = 'Throwing Stones'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Mesa Verde'),
+		(SELECT song_id FROM songs WHERE name = 'Brokedown Palace'))
+		
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Mount Rainier'),
+		(SELECT song_id FROM songs WHERE name = 'Playing in the Band'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'New River Gorge'),
+		(SELECT song_id FROM songs WHERE name = 'Cumberland Blues'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'North Cascades'),
+		(SELECT song_id FROM songs WHERE name = 'Unbroken Chain'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Olympic'),
+		(SELECT song_id FROM songs WHERE name = 'Lazy Lightning'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Petrified Forest'),
+		(SELECT song_id FROM songs WHERE name = 'He''s Gone'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Pinnacles'),
+		(SELECT song_id FROM songs WHERE name = 'The Music Never Stopped'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Redwood'),
+		(SELECT song_id FROM songs WHERE name = 'Weather Report Suite > Let It Grow'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Rocky Mountain'),
+		(SELECT song_id FROM songs WHERE name = 'China Cat Sunflower'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Saguaro'),
+		(SELECT song_id FROM songs WHERE name = 'Jack Straw'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Sequoia'),
+		(SELECT song_id FROM songs WHERE name = 'Uncle John''s Band'))
+
+				
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Shenandoah'),
+		(SELECT song_id FROM songs WHERE name = 'I''ve Been All Around This World'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Theodore Roosevelt'),
+		(SELECT song_id FROM songs WHERE name = 'Brown Eyed Women'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Virgin Islands'),
+		(SELECT song_id FROM songs WHERE name = 'Eyes of the World'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Voyageurs'),
+		(SELECT song_id FROM songs WHERE name = 'Row Jimmy'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'White Sands'),
+		(SELECT song_id FROM songs WHERE name = 'China Doll'))
+
+
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Wind Cave'),
+		(SELECT song_id FROM songs WHERE name = 'Blow Away'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Wrangell-St. Elias'),
+		(SELECT song_id FROM songs WHERE name = 'Cryptical Envelopment > The Other One'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Yellowstone'),
+		(SELECT song_id FROM songs WHERE name = 'Dire Wolf'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Yosemite'),
+		(SELECT song_id FROM songs WHERE name = 'Terrapin Station'))
+
+		
+INSERT INTO park_song(park_id, song_id)
+VALUES((SELECT park_id FROM parks WHERE name = 'Zion'),
+		(SELECT song_id FROM songs WHERE name = 'Samson and Delilah'))
+
+COMMIT;
+
+--SELECT * FROM park_song;
