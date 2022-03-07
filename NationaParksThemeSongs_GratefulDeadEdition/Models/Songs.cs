@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NationaParksThemeSongs_GratefulDeadEdition.Models
+namespace NationalParksThemeSongs_GratefulDeadEdition.Models
 {
     public class Songs
     {

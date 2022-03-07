@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NationaParksThemeSongs_GratefulDeadEdition.Models
+namespace NationalParksThemeSongs_GratefulDeadEdition.Models
 {
     public class Parks
     {
@@ -26,6 +26,15 @@ namespace NationaParksThemeSongs_GratefulDeadEdition.Models
             Area = area;
             Visitors = annualVisitors;
             Description = parkDescription;
+        }
+        public override string ToString()
+        {
+            return ($"{Name}" +
+                  $"\n Location(s):{Location}" +
+                  $"\n Date Established: {EstablishDate}" +
+                  $"\n Area: {Area} SqKm" +
+                  $"\n Average Annual Visitors: {Visitors}" +
+                  $"\n About the Park: {Description}");
         }
     }
 }

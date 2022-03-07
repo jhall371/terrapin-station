@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using NationaParksThemeSongs_GratefulDeadEdition.Models;
+using NationalParksThemeSongs_GratefulDeadEdition.Models;
 
-namespace NationaParksThemeSongs_GratefulDeadEdition.DAO
+namespace NationalParksThemeSongs_GratefulDeadEdition.DAO
 {
     public class SongsSqlDao : ISongsSqlDao
     {
