@@ -28,5 +28,13 @@ namespace NationalParksThemeSongs_GratefulDeadEdition.Models
             Link = songLink;
             Description = songDescription;
         }
+        public override string ToString()
+        {
+            return ($"{Name}" +
+                  $"\n Venue: {Venue} - {Location}" +
+                  $"\n Date Recorded: {DateRecorded}" +
+                  $"\n Listen Here: {Link}\n" +
+                  $"\nThis would make a good theme song for this park because...\n {Description}");
+        }
     }
 }

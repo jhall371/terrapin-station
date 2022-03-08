@@ -33,8 +33,8 @@ namespace NationalParksThemeSongs_GratefulDeadEdition.Models
                   $"\n Location(s):{Location}" +
                   $"\n Date Established: {EstablishDate}" +
                   $"\n Area: {Area} SqKm" +
-                  $"\n Average Annual Visitors: {Visitors}" +
-                  $"\n About the Park: {Description}");
+                  $"\n Average Annual Visitors: {Visitors}\n" +
+                  $"\n About the Park: \n {Description}");
         }
     }
 }
